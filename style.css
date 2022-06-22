@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Ramaraja&display=swap");
+* {
+    padding: 0;
+    margin: 0; }
+header{
+    top: 0;
+    background: white;
+    background: linear-gradient(98deg, #d38d8d 50%, #500000 60%);
+}
+.divLogo{
+    display: flex;
+    justify-content:center;
+}
+.imagenLogo{
+    display: flex;
+    height: 6rem;
+}
+.titulo{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    color: #6a0000;
+    font-family: 'Ramaraja', serif;
+    font-size: 5rem;
+}
+.imgTamaño{
+    width: 50vh;
+    height: 50vh;
+}
+.imgTamaño1{
+    width: 50vh;
+    height: 40vh;
+}
+/* FOOTER */
+footer{
+    background-color: #f04444;
+    bottom: 0;
+}
+.footer-basic {
+    padding-top: 1rem;
+    background-color:#ffffff;
+    color:#000000;
+  }
+.snapchat{
+    margin-top: 0.5rem;
+}
+  .footer-basic ul {
+    padding:0;
+    list-style:none;
+    text-align:center;
+    font-size:18px;
+    line-height:1.6;
+    margin-bottom:0;
+  }
+  
+  .footer-basic li {
+    padding:0 10px;
+  }
+  
+  .footer-basic ul a {
+    color:inherit;
+    text-decoration:none;
+    opacity:0.8;
+  }
+  
+  .footer-basic ul a:hover {
+    opacity:1;
+  }
+  
+  .footer-basic .social {
+    text-align:center;
+    padding-bottom:25px;
+  }
+  
+  .footer-basic .social > a {
+    font-size:24px;
+    width:40px;
+    height:40px;
+    line-height:40px;
+    display:inline-block;
+    text-align:center;
+    border-radius:50%;
+    border:1px solid #ccc;
+    margin:0 8px;
+    color:inherit;
+    opacity:0.75;
+    margin-top: 0.5rem;
+  }
+  
+  .footer-basic .social > a:hover {
+    opacity:0.9;
+  }
+  
+  .footer-basic .copyright {
+    margin-top:15px;
+    text-align:center;
+    font-size:13px;
+    color:#aaa;
+    margin-bottom:0;
+  }
+  
+  
