@@ -1,7 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Ramaraja&display=swap");
 * {
-    padding: 0;
-    margin: 0; }
+  padding: 0;
+  margin: 0; }
+  html{
+    height: 100%;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+  
+    width: 100%;
+    min-height: 100vh;
+  }
+  main{
+    overflow-y: hidden;
+    background-color: #a31010;
+    opacity: 1;
+    background-image:  radial-gradient(#106ca2 0.8500000000000001px, transparent 0.8500000000000001px), radial-gradient(#106ca2 0.8500000000000001px, #a31010 0.8500000000000001px);
+    background-size: 34px 34px;
+      background-position: 0 0,17px 17px;
+  }
 header{
     top: 0;
     background: white;
@@ -19,9 +37,11 @@ header{
     display: flex;
     justify-content: center;
     margin-top: 2rem;
-    color: #6a0000;
+    color: #ffffff;
     font-family: 'Ramaraja', serif;
     font-size: 5rem;
+    text-shadow:  2.5px 2.5px #106ca2;
+
 }
 .imgTamaño{
     width: 50vh;
@@ -32,15 +52,11 @@ header{
     height: 40vh;
 }
 /* FOOTER */
-footer{
-    background-color: #f04444;
-    bottom: 0;
-}
 .footer-basic {
     padding-top: 1rem;
-    background-color:#ffffff;
+    background-color:#ef3737;
     color:#000000;
-  }
+    }
 .snapchat{
     margin-top: 0.5rem;
 }
@@ -98,5 +114,66 @@ footer{
     color:#aaa;
     margin-bottom:0;
   }
-  
-  
+  /* Cards */
+  body{
+    width: 100%;
+    font-family: sans-serif;
+    letter-spacing: 0.03em;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  .container{
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+  }
+  .container .card{
+    width: 330px;
+    height: 430px;
+    border-radius: 12px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    text-align: center;
+    transition: all 0.25s;
+    margin: 1rem;
+  }
+  .container .card:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+  }
+  .container .card img{
+    width: 330px;
+    height: 300px;
+  }
+  .container .card h4{
+    font-weight: 600;
+  }
+  .container .card p{
+    padding: 0 1rem;
+    font-size: 16px;
+    font-weight: 300;
+  }
+  .container .card a {
+    font-weight: 500;
+    text-decoration: none;
+    color: #106ca2;
+  }
+
+footer {
+    width: 100%;
+    margin-top: auto;
+}
+.boton{
+border: 2px solid #106ca2;
+background-color: #fe0000;
+color: #ffffff;
+text-decoration: none;
+text-transform: uppercase;
+font-family: 'Helvetica', sans-serif;
+border-radius: 50px;  
+}
