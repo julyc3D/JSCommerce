@@ -1,7 +1,13 @@
-let nombreUsuario = prompt("Ingrese su nombre");
+let numeroIngresado = prompt('Ingresa la cantidad de veces que quieras que aparezca un mensaje emergente, gracias.')
 
-let apellidoUsuario = prompt("Ingrese su apellido")
+if (numeroIngresado <= 15) {
 
-let salida = nombreUsuario + " " + apellidoUsuario + " " + "ha sido ingresado";
+    for (let i = 1; i <= numeroIngresado; i++) {
 
-alert(salida);
+        alert('Este es el mensaje ' + i)
+
+    }
+}
+else {
+    alert('solo me enseñaron a contar hasta 15, no me odies.')
+}
