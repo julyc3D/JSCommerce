@@ -1,13 +1,26 @@
-let numeroIngresado = prompt('Ingresa la cantidad de veces que quieras que aparezca un mensaje emergente, gracias.')
+const producto = "Picador Cogonaut"
 
-if (numeroIngresado <= 15) {
 
-    for (let i = 1; i <= numeroIngresado; i++) {
+for (let intentos = 0; intentos <=3; intentos++) {
+    let password = parseInt(prompt("Ingrese el password"))
 
-        alert('Este es el mensaje ' + i)
+    if (password === 7890) { 
 
+        function agregarAlCarrito(){
+            console.log("agregaste el producto al carrito: " + producto)
+            
+        }
+        agregarAlCarrito()
+        alert("Bienvenido a este maravilloso sitio")
+        break
     }
-}
-else {
-    alert('solo me enseñaron a contar hasta 15, no me odies.')
+    else {
+        alert("password Incorrecto, Intente nuevamente.")
+    }
+    if (intentos === 3) {
+
+        alert('No estas autorizado a esta informacion')
+        window.location.href = "noAutorizado.html";
+    }
+
 }
