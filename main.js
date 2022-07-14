@@ -1,4 +1,4 @@
-const producto = "Picador Cogonaut"
+/* const producto = "Picador Cogonaut"
 
 
 for (let intentos = 0; intentos <=3; intentos++) {
@@ -24,3 +24,36 @@ for (let intentos = 0; intentos <=3; intentos++) {
     }
 
 }
+*/
+/* const carrito = [];
+
+function agregarAlCarrito(producto){ 
+
+    
+    carrito.push(producto);
+    console.log(carrito);
+}
+
+agregarAlCarrito({id: 1, name: "picador cogonaut", price: 1500})
+
+agregarAlCarrito() */
+
+const carrito = [];
+
+function agregarAlCarrito(producto){
+    carrito.push(producto);
+    console.log(carrito);
+}
+
+agregarAlCarrito({id: 100, name: "Cogonaut Diablo", price: 1500})
+agregarAlCarrito({id: 200, name: "Cogonaut Helado", price: 1500})
+agregarAlCarrito({id: 300, name: "Cogonaut Cactus", price: 1500})
+agregarAlCarrito({id: 400, name: "Soporte celular", price: 1200})
+
+function borrarProductoDelCarrito(idDelProducto){
+    const index = carrito.findIndex(producto => producto.id === idDelProducto)
+    carrito.splice(index, 1)
+    console.log(index)
+
+}
+borrarProductoDelCarrito(300)
