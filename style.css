@@ -190,6 +190,30 @@ text-transform: uppercase;
 font-family: 'Helvetica', sans-serif;
 border-radius: 50px;  
 }
+.precio{
+  border: solid 1px white;
+
+}
+.precio{
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  width: 100px;
+  height: 25px;
+  border: solid 1px #106ca2;
+  background-color: #FFD700;
+  margin-left: 5px;
+  border-radius: 20%;
+  font-family: 'Helvetica', sans-serif;
+  box-shadow: 0px 2px 2px 2px#000000;
+}
+
+
+
+
+
+
+
 @media only screen and (max-width: 361px) {
 .container .card{
   height: 460px;

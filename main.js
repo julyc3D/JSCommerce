@@ -1,7 +1,7 @@
-const producto = "Picador Cogonaut"
+/* const producto = "Picador Cogonaut" */
 
 
-for (let intentos = 0; intentos <=3; intentos++) {
+/* for (let intentos = 0; intentos <=3; intentos++) {
     let password = parseInt(prompt("Ingrese el password"))
 
     if (password === 7890) { 
@@ -18,8 +18,8 @@ for (let intentos = 0; intentos <=3; intentos++) {
         window.location.href = "noAutorizado.html";
     }
 
-}
-
+} */
+/* 
 const carrito = [];
 
 function agregarAlCarrito(producto){
@@ -38,4 +38,43 @@ function borrarProductoDelCarrito(idDelProducto){
     console.log(index)
 
 }
-borrarProductoDelCarrito(300)
+borrarProductoDelCarrito(300) */
+const carrito = [];
+
+const productos = [
+    {id:1, tittle:"Picador Cogonaut Diablo", price: 1500},
+    {id:2, tittle:"Picador Cogonaut Cactus", price: 1500},
+    {id:3, tittle:"Picador Cogonaut Helado", price: 1500},
+    {id:4, tittle:"Picador Hongo Mario Bross", price: 1500},
+    {id:5, tittle:"Soporte Butaca Competicion", price: 1500},
+    {id:6, tittle:"Toppers Personalizados", price: 1500},
+    {id:7, tittle:"Mate Piston", price: 1500},
+    {id:8, tittle:"Mate Darth Vader", price: 1500},
+    {id:9, tittle:"Mate StormTrooper", price: 1500},
+    {id:10, tittle:"Macetas Robert", price: 1500},
+    {id:11, tittle:"Macetas Personalizadas", price: 1500},
+    {id:12, tittle:"Cortante FLor", price: 1500},
+
+];
+
+let cards = ''
+
+productos.forEach((producto) => {
+    const idButton = `add-cart${producto.id}`
+    document.getElementById("seccion-card").innerHTML += `<div class="card">
+    <div class="precio">
+        <p>${producto.price}</p>
+    </div>
+    <img src="../JavaScript Coder/Imagenes/picaDiablo1.jpg">
+    <h4>${producto.tittle}</h4>
+    <p>Picador simil cogonaut diablo | Colores a eleccion</p>
+    <a class="boton" id="${idButton}">Añadir Al Carrito</a>
+</div>`;
+})
+
+productos.forEach((producto) => {
+    const idButton = `add-cart${producto.id}`
+    document.getElementById(idButton).addEventListener('click', () => {
+        alert("Me Agregaste Al Carrito!");
+    })
+})
