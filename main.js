@@ -1,4 +1,4 @@
-/* for (let intentos = 0; intentos <=3; intentos++) {
+for (let intentos = 0; intentos <=3; intentos++) {
     let password = parseInt(prompt("Ingrese el password"))
 
     if (password === 7890) { 
@@ -16,8 +16,9 @@
     }
 
 }
- */
+
 const totalCarrito = localStorage.getItem("totalCarrito");
+document.getElementById("cart-total").innerHTML = totalCarrito
 const carrito = [];
 
 const productos = [
