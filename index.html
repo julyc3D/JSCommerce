@@ -8,6 +8,7 @@
         <link rel="icon" type="image/x-icon" href="./Imagenes/c3D_imagen.png">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
         <link rel="stylesheet" href="style.css">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script defer src="main.js"></script>
     <title>Mi Primer JS</title>
     
@@ -27,130 +28,12 @@
     </header>
     <main>
         <h1 class="titulo">¡Productos!</h1>
-        <!-- <div class="card">
-            <div class="precio">
-                <p>$1500</p>
-            </div>
-            <img src="../JavaScript Coder/Imagenes/picaDiablo1.jpg">
-            <h4>Picador Cogonaut Diablo</h4>
-            <p>Picador simil cogonaut diablo | Colores a eleccion</p>
-            <a class="boton" onClick="agregarAlCarrito('Picador Diablo')" href="#">Añadir Al Carrito</a>
-        </div> -->
-        <section>
+        <section class="container">
             <div class="container">
                 <div id="seccion-card"></div>
             </div>    
-            </section>
-            <!-- <div class="card">
-                <div class="precio">
-                    <p>$1500</p>
-                </div>
-                <img src="../JavaScript Coder/Imagenes/picaCactus1.jpg">
-                <h4>Picador Cogonaut Cactus</h4>
-                <p>Picador simil cogonaut Cactus | Colores a eleccion</p>
-                <a class="boton" onClick="agregarAlCarrito('Picador Cactus')" href="#">Añadir Al Carrito</a>
-            </div>
+        </section>
             
-            <div class="card">
-                <div class="precio">
-                    <p>$1500</p>
-                </div>
-                <img src="../JavaScript Coder/Imagenes/picaHelado1.jpg">
-                <h4>Picador Cogonaut Helado</h4>
-                <p>Picador Simil Cogonaut Helado | Colores a eleccion</p>
-                <a class="boton" onClick="agregarAlCarrito('Picador Helado')" href="#">Añadir Al Carrito</a>
-            </div>
-            
-            <div class="card">
-                <div class="precio">
-                    <p>$1500</p>
-                </div>
-                <img src="../JavaScript Coder/Imagenes/picaHongo.jpg">
-                <h4>Picador Hongo Mario Bross</h4>
-                <p>Picador Hongo | Color variable</p>
-                <a class="boton" onClick="agregarAlCarrito('Picador Hongo')" href="#">Añadir Al Carrito</a>
-            </div>
-            
-            <div class="card">
-                <div class="precio">
-                    <p>$1000</p>
-                </div>
-                <img src="../JavaScript Coder/Imagenes/soporteCelu1.jpg">
-                <h4>Soporte butaca competicion</h4>
-                <p>Soporte para celular de butaca de competicion | colores a eleccion</p>
-                <a class="boton" onClick="agregarAlCarrito('Soporte Celular')" href="#">Añadir Al Carrito</a>
-            </div>
-
-            <div class="card">
-                <div class="precio">
-                    <p>$200</p>
-                </div>
-                <img src="../JavaScript Coder/Imagenes/toppers.jpg">
-                <h4>Toppers personalizados</h4>
-                <p>Toppers personalizados, consultar por modelos y color</p>
-                <a class="boton" onClick="agregarAlCarrito('Toppers Tortas')" class="boton" href="#">Añadir Al Carrito</a>
-            </div>
-            
-            <div class="card">
-                <div class="precio">
-                    <p>$1200</p>
-                </div>
-                <img src="../JavaScript Coder/Imagenes/matePiston.jpg">
-                <h4>Mate Piston</h4>
-                <p>Mate con forma de piston | color a eleccion</p>
-                <a class="boton" onClick="agregarAlCarrito('Mate Piston')" href="#">Añadir Al Carrito</a>
-            </div>
-            
-            <div class="card">
-                <div class="precio">
-                    <p>$1000</p>
-                </div>
-                <img src="../JavaScript Coder/Imagenes/mateDarth.jpg">
-                <h4>Mate Darth Vader</h4>
-                <p>Mate personalizado Darth Vader</p>
-                <a class="boton" onClick="agregarAlCarrito('Mate DarthVader')" href="#">Añadir Al Carrito</a>
-            </div>
-            
-            <div class="card">
-                <div class="precio">
-                    <p>$1200</p>
-                </div>
-                <img src="../JavaScript Coder/Imagenes/mateStorm.jpg">
-                <h4>Mate StormTrooper</h4>
-                <p>Mate StormTrooper personalizado</p>
-                <a class="boton" onClick="agregarAlCarrito('Mate StormTrooper')" href="#">Añadir Al Carrito</a>
-            </div>
-            
-            <div class="card">
-                <div class="precio">
-                    <p>$700</p>
-                </div>
-                <img src="../JavaScript Coder/Imagenes/macetasMuñecos.jpg">
-                <h4>Macetas Robert</h4>
-                <p>Macetas Robert Personalizadas | colores a eleccion</p>
-                <a class="boton" onClick="agregarAlCarrito('Macetas Muñecos')" href="#">Añadir Al Carrito</a>
-            </div>
-            
-            <div class="card">
-                <div class="precio">
-                    <p>$700</p>
-                </div>
-                <img src="../JavaScript Coder/Imagenes/macetasVarias.jpg">
-                <h4>Macetas Personalizadas</h4>
-                <p>Macetas Personalizadas | colores a eleccion</p>
-                <a class="boton" onClick="agregarAlCarrito('Macetas Varias')" href="#">Añadir Al Carrito</a>
-            </div>
-            
-            <div class="card">
-                <div class="precio">
-                    <p>$200</p>
-                </div>
-                <img src="../JavaScript Coder/Imagenes/cortanteFlor.jpg">
-                <h4>Cortante Flor</h4>
-                <p>Cortantes Personalizados a pedido</p>
-                <a class="boton" onClick="agregarAlCarrito('Cortante Flor')" href="#">Añadir Al Carrito</a>
-            </div>
-        </div> -->
     </main>
     <footer>
         <div class="footer-basic">

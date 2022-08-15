@@ -1,15 +1,22 @@
-for (let intentos = 0; intentos <=3; intentos++) {
+const carrito = JSON.parse(localStorage.getItem("carrito")) ?? []
+
+for (let intentos = 0; intentos <=2; intentos++) {
     let password = parseInt(prompt("Ingrese el password"))
 
     if (password === 7890) { 
 
-        alert("Bienvenido a este maravilloso sitio")
+        Swal.fire(
+            'Felicidades!',
+            'Acertaste la contraseña',
+            'success'
+        )
+        
         break
     }
     else {
         alert("password Incorrecto, Intente nuevamente.")
     }
-    if (intentos === 3) {
+    if (intentos === 2) {
 
         alert('No estas autorizado a esta informacion')
         window.location.href = "noAutorizado.html";
@@ -17,23 +24,23 @@ for (let intentos = 0; intentos <=3; intentos++) {
 
 }
 
-const totalCarrito = localStorage.getItem("totalCarrito");
-document.getElementById("cart-total").innerHTML = totalCarrito
-const carrito = [];
+console.log(carrito);
+document.getElementById("cart-total").innerHTML = localStorage.getItem("totalCarrito") ?? 0
+/* const carrito = []; */
 
 const productos = [
-    {id:1, tittle:"Picador Cogonaut Diablo", price: "$1500", description:"Picador simil cogonaut diablo | Colores a eleccion"},
-    {id:2, tittle:"Picador Cogonaut Cactus", price: "$1500", description:"Picador simil cogonaut Cactus | Colores a eleccion"},
-    {id:3, tittle:"Picador Cogonaut Helado", price: "$1500", description:"Picador Simil Cogonaut Helado | Colores a eleccion"},
-    {id:4, tittle:"Picador Hongo Mario Bross", price: "$1100", description:"Picador Hongo | Color variable"},
-    {id:5, tittle:"Soporte Butaca Competicion", price: "$1000", description:"Soporte para celular de butaca de competicion | colores a eleccion"},
-    {id:6, tittle:"Toppers Personalizados", price: "$200", description:"Toppers personalizados, consultar por modelos y color"},
-    {id:7, tittle:"Mate Piston", price: "$1000", description:"Mate con forma de piston | color a eleccion"},
-    {id:8, tittle:"Mate Darth Vader", price: "$1000", description:"Mate personalizado Darth Vader"},
-    {id:9, tittle:"Mate StormTrooper", price: "$1200", description:"Mate StormTrooper personalizado"},
-    {id:10, tittle:"Macetas Robert", price: "$550", description:"Macetas Robert Personalizadas | colores a eleccion"},
-    {id:11, tittle:"Macetas Personalizadas", price: "$500", description:"Macetas Personalizadas | colores a eleccion"},
-    {id:12, tittle:"Cortante FLor", price: "$200", description:"Cortantes Personalizados a pedido"},
+    {id:"1", tittle:"Picador Cogonaut Diablo", price: "$1500", description:"Picador simil cogonaut diablo | Colores a eleccion", img:"../JavaScript Coder/Imagenes/picaDiablo1.jpg"},
+    {id:"2", tittle:"Picador Cogonaut Cactus", price: "$1500", description:"Picador simil cogonaut Cactus | Colores a eleccion", img:"../JavaScript Coder/Imagenes/picaCactus1.jpg"},
+    {id:"3", tittle:"Picador Cogonaut Helado", price: "$1500", description:"Picador Simil Cogonaut Helado | Colores a eleccion", img:"../JavaScript Coder/Imagenes/picaHelado1.jpg"},
+    {id:"4", tittle:"Picador Hongo Mario Bross", price: "$1100", description:"Picador Hongo | Color variable", img:"../JavaScript Coder/Imagenes/picaHongo.jpg"},
+    {id:"5", tittle:"Soporte Butaca Competicion", price: "$1000", description:"Soporte para celular de butaca de competicion | colores a eleccion", img:"../JavaScript Coder/Imagenes/soporteCelu1.jpg"},
+    {id:"6", tittle:"Toppers Personalizados", price: "$200", description:"Toppers personalizados, consultar por modelos y color", img:"../JavaScript Coder/Imagenes/toppers.jpg"},
+    {id:"7", tittle:"Mate Piston", price: "$1000", description:"Mate con forma de piston | color a eleccion", img:"../JavaScript Coder/Imagenes/matePiston.jpg"},
+    {id:"8", tittle:"Mate Darth Vader", price: "$1000", description:"Mate personalizado Darth Vader", img:"../JavaScript Coder/Imagenes/mateDarth.jpg"},
+    {id:"9", tittle:"Mate StormTrooper", price: "$1200", description:"Mate StormTrooper personalizado", img:"../JavaScript Coder/Imagenes/mateStorm.jpg"},
+    {id:"10", tittle:"Macetas Robert", price: "$550", description:"Macetas Robert Personalizadas | colores a eleccion", img:"../JavaScript Coder/Imagenes/macetasMuñecos.jpg"},
+    {id:"11", tittle:"Macetas Personalizadas", price: "$500", description:"Macetas Personalizadas | colores a eleccion", img:"../JavaScript Coder/Imagenes/macetasVarias.jpg"},
+    {id:"12", tittle:"Cortante FLor", price: "$200", description:"Cortantes Personalizados a pedido", img:"../JavaScript Coder/Imagenes/cortanteFlor.jpg"},
 
 ];
 
@@ -45,7 +52,7 @@ productos.forEach((producto) => {
     <div class="precio">
         <p>${producto.price}</p>
     </div>
-    <img src="../JavaScript Coder/Imagenes/picaDiablo1.jpg">
+    <img src="${producto.img}">
     <h4>${producto.tittle}</h4>
     <p>${producto.description}</p>
     <a class="boton" id="${idButton}" data.id="${producto.id}">Añadir Al Carrito</a>
@@ -57,9 +64,10 @@ productos.forEach((producto) => {
     const idButton = `add-cart${producto.id}`
     document.getElementById(idButton).addEventListener('click', () => {
         carrito.push(producto);
-        document.getElementById("cart-total").innerHTML = carrito.lenght + Number(totalCarrito);
+        localStorage.setItem("carrito", JSON.stringify(carrito));
+        document.getElementById("cart-total").innerHTML = carrito.length/*  + Number(totalCarrito) */;
         console.log(carrito)
-        localStorage.setItem("totalCarrito", carrito.lenght)
+        localStorage.setItem("totalCarrito", JSON.stringify(carrito.length))
         alert("Me Agregaste Al Carrito!");
     })
 })
