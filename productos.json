@@ -1,3 +1,4 @@
+
 [
     {"id":"1", "tittle":"Picador Cogonaut Diablo", "price": "$1500", "description":"Picador simil cogonaut diablo | Colores a eleccion", "img" :"../JavaScript Coder/Imagenes/picaDiablo1.jpg"},
     {"id":"2", "tittle":"Picador Cogonaut Cactus", "price": "$1500", "description":"Picador simil cogonaut Cactus | Colores a eleccion", "img" :"../JavaScript Coder/Imagenes/picaCactus1.jpg"},
@@ -13,3 +14,4 @@
     {"id":"12"," tittle":"Cortante FLor", "price": "$200", "description":"Cortantes Personalizados a pedido", "img" :"../JavaScript Coder/Imagenes/cortanteFlor.jpg"}
 
 ]
+

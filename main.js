@@ -23,6 +23,7 @@ for (let intentos = 0; intentos <=2; intentos++) {
     }
 
 }
+
 console.log(carrito);
 document.getElementById("cart-total").innerHTML = localStorage.getItem("totalCarrito") ?? 0
 
