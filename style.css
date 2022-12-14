@@ -208,12 +208,23 @@ border-radius: 50px;
   font-family: 'Helvetica', sans-serif;
   box-shadow: 0px 2px 2px 2px#000000;
 }
-
-
-
-
-
-
+.cardFilter{
+  height: 2rem;
+  width: 20rem;
+  background: #500000;
+  border: none;
+  font-size: 15pt;
+  float: center;
+  color: #ffffff;
+  padding-left: 0.8rem;
+  padding-bottom: 0.1rem;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.filtro{
+  display: none;
+}
 
 @media only screen and (max-width: 361px) {
 .container .card{

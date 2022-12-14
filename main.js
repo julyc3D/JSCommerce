@@ -74,6 +74,37 @@ productos.forEach((producto) => {
             title: 'Me Añadiste Al Carrito',
             showConfirmButton: false,
             timer: 1200
-          })
+        })
     })
+})
+/* 
+const d = document;
+
+function searchFilters(input,selector) {
+d.addEventListener("keyup", (e) => {
+    if (e.target.matches(input)){
+        console.log(e.target.value);
+    
+    if (e.key === "Escape"){
+        e.target.value = ""
+    }
+    d.querySelectorAll(selector).forEach((el) =>
+        el.textContent.toLowerCase().includes(e.target.value)
+        ? el.classList.remove("filter")
+        : el.classList.add("filter")
+        );
+    }
+});
+}
+searchFilters(".cardFilter",".card") */
+document.addEventListener("keyup", e=>{
+    
+    if (e.target.matches("#buscador")){
+
+        document.querySelectorAll("seccion-card").forEach(fruta =>{
+            fruta.textContent.toLowerCase().includes(e.target.value.toLowerCase())
+                ?fruta.classList.remove("filter")
+                    :fruta.classList.add("filter")
+        })
+    }
 })
