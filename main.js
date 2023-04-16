@@ -86,7 +86,7 @@ d.addEventListener("keyup", (e) => {
         console.log(e.target.value);
     
     if (e.key === "Escape"){
-        e.target.value = ""
+        e.target.value = "
     }
     d.querySelectorAll(selector).forEach((el) =>
         el.textContent.toLowerCase().includes(e.target.value)
